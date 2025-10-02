@@ -9,7 +9,7 @@ This project develops a **machine learning pipeline** to classify enzymes vs. no
 - Dataset: **62,730 protein sequences** curated from India Govt. rice genome + UniProt mapping  
 - Features: **28 extracted features** including molecular weight, isoelectric point, GRAVY, instability index, amino acid composition, sequence length  
 - Models: Random Forest, XGBoost, LightGBM, and an **Ensemble Voting Classifier**  
-- Metrics: **F1 Score = 0.768, ROC AUC = 0.94**  
+- Metrics: **F1 Score = 0.768, ROC AUC = 0.94**   (Voting Classifier results on test set)
 - Tools: **Python, Biopython, Scikit-learn, Imbalanced-learn**  
 
 ---
@@ -61,13 +61,13 @@ The **Voting Classifier** achieved the best performance:
 
 | Model              | F1 Score | Precision | Recall | Accuracy | ROC AUC |  
 |--------------------|----------|-----------|--------|----------|---------|  
-| Random Forest      | 0.745    | 0.713     | 0.780  | 0.878    | 0.929   |  
-| XGBoost            | 0.765    | 0.751     | 0.781  | 0.891    | 0.934   |  
-| LightGBM           | 0.753    | 0.719     | 0.790  | 0.881    | 0.931   |  
-| **Voting Classifier** | **0.768** | **0.757** | **0.778** | **0.893** | **0.940** |  
+| Voting Classifier  | 0.767    | 0.746     | 0.789  | 0.881    | 0.936   |  
+| XGBoost            | 0.765    | 0.750     | 0.780  | 0.890    | 0.934   |  
+| LightGBM           | 0.752    | 0.718     | 0.789  | 0.881    | 0.931   |  
+| Random Forest      | 0.745    | 0.712     | 0.780  | 0.877    | 0.928   |  
 
 ✅ Ensemble learning outperformed individual models.  
-✅ ROC AUC > 0.93 across all models indicates strong discriminative ability.  
+✅ ROC AUC > 0.92 across all models indicates strong discriminative ability.  
 
 ---
 
